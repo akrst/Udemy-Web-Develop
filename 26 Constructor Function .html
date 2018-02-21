@@ -1,0 +1,34 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hello world!</title>
+	<script type="text/javascript">
+		function Hero(name, armor, strength, attack){
+			this.name = name
+			this.armor = armor;
+			this.strength = strength;
+			this.attack = attack;
+
+		}
+
+		var dwarf = new Hero("dwarf", "5", "5", "5");
+		var barbarian = new Hero("barbarian", "7", "7", "7");
+		var elf = new Hero("elf", "9", "9", "9");
+
+		// var character = elf;
+
+		// document.write("<h3>"+character.name+ " Properties</h3>");
+		// document.write("Armor: "+character.armor+"<br />");
+		// document.write("Strength: "+character.strength+"<br />");
+		// document.write("Attack: "+character.attack+"<br />");
+
+		for (var x in dwarf){
+			document.write(x + ":" + dwarf[x]+ "<br>");
+		}
+	</script>
+</head>
+
+<body>
+</body>
+
+</html>
