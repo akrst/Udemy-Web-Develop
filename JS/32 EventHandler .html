@@ -1,0 +1,36 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Hello world!</title>
+	<style type="text/css" media="screen">
+		#div1{
+			background: #000;
+			height: 130px;
+			width: 130px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <input type="button" value="Click Here!" onclick="Hi();"> -->
+	<!-- <input type="button" value="Click Here!" onclick="alert('Hi it works!');"> -->
+	<form>
+		<input type="button" value="Click Here!" id="testing">
+	</form>
+
+</body>
+
+<script type="text/javascript">
+	// function Hi (){
+	// 	window.alert("Hi this works!");
+	// }
+
+	var button_test = document.getElementById("testing");
+	button_test.onclick = function(){
+		alert("it works this way too.");
+	}
+
+</script>
+
+</html>
+ 
