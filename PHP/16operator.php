@@ -1,18 +1,17 @@
 <?php
-/* 多次元配列
-多次元配列は、配列の中に配列がある配列
-
+/*
+	演算子
 */
+$name = "Victor";
+$name1 = "";
 
-$names = array("Victor", "Alex", "John");
 
-$cities = array("Miami", "Madrid", "Paris");
+if ($name || $name1){
+	//do somthing
+	echo "the condition is true!";
+}else{
+	echo "the condition is not true!";
+}
 
-$data = array("names"=> $names,"cities"=>$cities);
 
-echo $data["cities"][1]; //多次元配列の呼び出し
-
-$data2 = array("data" => $data);
-
-echo $data2["data"]["cities"][1];
 ?>
