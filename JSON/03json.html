@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function go(){
+			var jsonobject ={
+			"name":"John",
+			"age":"28",
+			"phone":"090",
+			"movies":[
+					{'name':'lost', 'age':'34'},
+					{'name':'rocky', 'age':'53'},
+					{'name':'terminator', 'age':'22'}
+					]
+			};
+		document.getElementById('name').innerHTML=jsonobject.name;
+		document.getElementById('age').innerHTML=jsonobject.age;
+		document.getElementById('phone').innerHTML=jsonobject.phone;
+		alert(jsonobject.movies[1].age);
+		}
+	</script>
+</head>
+<body>
+Name:<div id="name"></div><br>
+Age:<div id="age"></div><br>
+Phone:<div id="phone"></div><br>
+<input type="button" value="GO" onclick="go();">
+</body>
+</html>
