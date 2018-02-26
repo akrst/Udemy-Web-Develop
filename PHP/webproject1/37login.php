@@ -1,10 +1,10 @@
 <?php
 	error_reporting(1);
 
-	include("32connection.php");
+	include('32connection.php');
 	//grab values email and password from login form
-	$login_email = $_POST['login_email'];
-	$login_password = $_POST['login_password'];
+	$login_email = mysqli_real_escape_string($dbc, trim($_POST['login_email']));
+	$login_password = mysqli_real_escape_string($dbc, trim($_POST['login_password']));
 
 	//create the query and number of rows returned from the query
 	$query = mysqli_query($dbc, "SELECT * FROM users WHERE email='".$login_email."'");
@@ -24,7 +24,8 @@
 			//create condition to check if email and password are equal to the returned row
 			if($login_email == $dbemail){
 				if($login_password == $dbpass){
-					echo "Welcome ".$dbfirstname.", you are in";
+					echo "<p>Welcome ".$dbfirstname.", you are in</p>";
+					include("40navbar.php");
 				}else{
 					echo "your password is incorrect!";
 				}
@@ -37,7 +38,6 @@
 	}else{
 		echo "Please Login...";
 	}
-
 
 ?>
 
