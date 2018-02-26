@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE email SYSTEM "07doctype.dtd">
+
+<note>
+	<to>Victor</to>
+	<from>John</from>
+	<body>
+		Hi, hou are you?
+	</body>
+</note>
