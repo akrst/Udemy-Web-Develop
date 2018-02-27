@@ -1,0 +1,23 @@
+<!-- 様々なイベントの紹介 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('button').click(function(){
+				$('p').hide(1000, function(){ //引数を指定して、カンマで区切りメソッドチェーンを実行するパターン
+					alert("you hide it");
+				});
+
+			});
+		});
+	</script>
+</head>
+<body>
+	<button>Click</button>
+	<p>Hello</p>
+</body>
+</html>

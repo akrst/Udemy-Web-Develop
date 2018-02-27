@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+			$('#button').click(function(){
+				// alert('hello');
+				$('#div1').hide(1000);
+			});
+		});
+
+	</script>
+</head>
+<body>
+	<div id="div1">Testting...</div>
+	<input type="button" id="button" value="hide it">
+</body>
+</html>

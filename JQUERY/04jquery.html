@@ -1,0 +1,28 @@
+<!-- 様々なイベントの紹介 -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('#first').click(function(){
+				$('#div1').slideToggle(1000);
+			});
+
+			// $('#second').click(function(){
+			// $('div2').toggle(500);
+			// });
+		});
+	</script>
+</head>
+<body>
+	<a href="#" id="first" "><h3>News of Today</h3></a><p>
+	<div id="div1" >This is the news of today, nothing special</div><br>
+
+<!-- 	<a href="#" id="second"><h3>Sports News</h3></a><p>
+	<div id="div2" style="display: none;">This is the news of today, nothing special</div><br> -->
+</body>
+</html>

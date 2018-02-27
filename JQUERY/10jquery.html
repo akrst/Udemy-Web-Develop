@@ -1,0 +1,40 @@
+<!-- シリアル化をしてみよう -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			$('form').submit(function(){
+				var send = $(this).serialize();
+
+				$.ajax({
+					type: "POST",
+					url:  "09jquery.php",
+					data: send,
+					dataType: "json",
+					success: function(msg){
+						$('#result').html("Name: "+msg.name+"<br>"+"Password: "+msg.password);
+					}
+				});
+				return false;
+			});
+		});
+	</script>
+</head>
+	<body>
+		<form>
+		Name: <input type="text" id="username" name="username" ><br>
+		Password: <input type="password" id="password" name="password" ><br>
+		<input type="submit" id="submit" value="submit">
+		</form>
+		<p>
+			<div id="result"></div>
+		</p>
+
+	<body>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!-- PHPとのつなぎ込み -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="js/jquery-3.3.1.min.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#send').click(function(){
+				$('#result').hide();
+				var vname = $('#name').val();
+				var vpassword = $('#password').val();
+				$.post('07jquery.php', {phpname:vname, phppassword:vpassword},function(data){ //dataでPHPから送られてきたデータを受け取る
+					$('#result').fadeIn('slow').html(data);
+				});
+			});
+		});
+	</script>
+</head>
+<body>
+	Name: <input type="text" id="name"><br>
+	Password: <input type="text" id="password"><br>
+	<p></p>
+	<input type="button" id="send" value="submit">
+	<p>
+		<div id="result" style="display: none;"></div>
+	</p>
+</body>
+</html>
