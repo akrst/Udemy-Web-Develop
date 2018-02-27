@@ -4,7 +4,7 @@
 
 	if($name && $password){
 		$dbc = mysqli_connect("localhost", "root", "root","testlogin") or die("could not connect to database, ERROR:".mysqli_connect_error());
-		// mysqli_select_db($dbc, "testlogin");
+		// mysqli_select_db($dbc, "testlogin"); mysqli_connectの第4引数に指定すれば、別で分ける必要はない
 
 		$query = mysqli_query($dbc, "SELECT * FROM users WHERE username='".$name."'");
 		$numrows = mysqli_num_rows($query);
