@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function test(){
+			var xmlhttp; //chrome, firefox
+			if (window.XMLHttpRequest){
+				xmlhttp = new XMLHttpRequest();
+			}else{
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			xmlhttp.onreadystatechange = function(){ //このfunctionはイベントハンドラーで呼び出す必要がないので、名前をつけていない
+				if (xmlhttp.readyState==4){ //4はサーバーがレスポンスを送る準備ができている状態
+					document.getElementById('result').innerHTML = xmlhttp.responseText;
+				}
+			}
+			xmlhttp.open("GET", "01text.txt", true);
+			xmlhttp.send();
+		}
+	</script>
+</head>
+<body>
+	<input type="button" name="" value="Click it!" onclick="test()"><br>
+	<div id="result">Result...</div>
+</body>
+</html>

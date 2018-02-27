@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function test(){
+			var xmlhttp;
+			if (window.XMLHttpRequest){
+				xmlhttp = new XMLHttpRequest();
+			}else{
+				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			var uname = document.getElementById('username').value;
+			var upassword = document.getElementById('userpassword').value;
+			xmlhttp.onreadystatechange = function(){
+				if(xmlhttp.readyState == 4){
+					document.getElementById('result').innerHTML = xmlhttp.responseText;
+				}
+			}
+			url = "04testlogin.php?name="+uname+"&password="+upassword;
+			xmlhttp.open("GET",url, true);
+			xmlhttp.send();
+		}
+	</script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+		<td>Name: </td><td><input type="text" name="name" id="username"></td>
+		<td>Password: </td><td><input type="password" name="password" id="userpassword"></td>
+		</tr>
+	</table>
+	<p><input type="button" name="" value="Login" onclick="test()"></p>
+	<p><div id="result">Result...</div></p>
+</body>
+</html>
