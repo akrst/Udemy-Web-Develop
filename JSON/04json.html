@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function go(){
+			var x = '{"friends":['+
+				'{"firstName":"John", "lastName":"Cena"},'+
+				'{"firstName":"Akira", "lastName":"Sato"},'+
+				'{"firstName":"Chihiro", "lastName":"Koiwa"}]}';
+			var y = eval("("+ x +")");
+			document.getElementById('name').innerHTML=y.friends[1].firstName;
+			document.getElementById('lastname').innerHTML=y.friends[1].lastName;
+		}
+	</script>
+</head>
+<body>
+Name:<div id="name"></div><br>
+Last Name:<div id="lastname"></div><br>
+<input type="button" value="GO" onclick="go();">
+</body>
+</html>
